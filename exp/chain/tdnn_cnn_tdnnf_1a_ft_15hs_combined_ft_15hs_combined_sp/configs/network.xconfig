@@ -1,0 +1,38 @@
+  input dim=100 name=ivector
+  input dim=40 name=input
+
+  # MFCC to filterbank
+  idct-layer name=idct input=input dim=40 cepstral-lifter=22 affine-transform-file=exp/chain/tdnn_cnn_tdnnf_1a_ft_15hs_combined_ft_15hs_combined_sp/configs/idct.mat
+
+  linear-component name=ivector-linear l2-regularize=0.0 dim=200 input=ReplaceIndex(ivector, t, 0)
+  batchnorm-component name=ivector-batchnorm target-rms=0.025
+  batchnorm-component name=idct-batchnorm input=idct
+
+  combine-feature-maps-layer name=combine_inputs input=Append(idct-batchnorm, ivector-batchnorm) num-filters1=1 num-filters2=5 height=40
+  conv-relu-batchnorm-layer name=cnn1 l2-regularize=0.01 height-in=40 height-out=40 time-offsets=-1,0,1 height-offsets=-1,0,1 num-filters-out=64
+  conv-relu-batchnorm-layer name=cnn2 l2-regularize=0.01 height-in=40 height-out=40 time-offsets=-1,0,1 height-offsets=-1,0,1 num-filters-out=64
+  conv-relu-batchnorm-layer name=cnn3 l2-regularize=0.01 height-in=40 height-out=20 height-subsample-out=2 time-offsets=-1,0,1 height-offsets=-1,0,1 num-filters-out=128
+  conv-relu-batchnorm-layer name=cnn4 l2-regularize=0.01 height-in=20 height-out=20 time-offsets=-1,0,1 height-offsets=-1,0,1 num-filters-out=128
+  conv-relu-batchnorm-layer name=cnn5 l2-regularize=0.01 height-in=20 height-out=10 height-subsample-out=2 time-offsets=-1,0,1 height-offsets=-1,0,1 num-filters-out=256
+  conv-relu-batchnorm-layer name=cnn6 l2-regularize=0.01 height-in=10 height-out=10 time-offsets=-1,0,1 height-offsets=-1,0,1 num-filters-out=256
+
+  # the first TDNN-F layer has no bypass
+  tdnnf-layer name=tdnnf7 l2-regularize=0.008 dropout-proportion=0.0 bypass-scale=0.0 dim=1536 bottleneck-dim=256 time-stride=0
+  tdnnf-layer name=tdnnf8 l2-regularize=0.008 dropout-proportion=0.0 bypass-scale=0.75 dim=1536 bottleneck-dim=160 time-stride=3
+  tdnnf-layer name=tdnnf9 l2-regularize=0.008 dropout-proportion=0.0 bypass-scale=0.75 dim=1536 bottleneck-dim=160 time-stride=3
+  tdnnf-layer name=tdnnf10 l2-regularize=0.008 dropout-proportion=0.0 bypass-scale=0.75 dim=1536 bottleneck-dim=160 time-stride=3
+  tdnnf-layer name=tdnnf11 l2-regularize=0.008 dropout-proportion=0.0 bypass-scale=0.75 dim=1536 bottleneck-dim=160 time-stride=3
+  tdnnf-layer name=tdnnf12 l2-regularize=0.008 dropout-proportion=0.0 bypass-scale=0.75 dim=1536 bottleneck-dim=160 time-stride=3
+  tdnnf-layer name=tdnnf13 l2-regularize=0.008 dropout-proportion=0.0 bypass-scale=0.75 dim=1536 bottleneck-dim=160 time-stride=3
+  tdnnf-layer name=tdnnf14 l2-regularize=0.008 dropout-proportion=0.0 bypass-scale=0.75 dim=1536 bottleneck-dim=160 time-stride=3
+  tdnnf-layer name=tdnnf15 l2-regularize=0.008 dropout-proportion=0.0 bypass-scale=0.75 dim=1536 bottleneck-dim=160 time-stride=3
+  tdnnf-layer name=tdnnf16 l2-regularize=0.008 dropout-proportion=0.0 bypass-scale=0.75 dim=1536 bottleneck-dim=160 time-stride=3
+  tdnnf-layer name=tdnnf17 l2-regularize=0.008 dropout-proportion=0.0 bypass-scale=0.75 dim=1536 bottleneck-dim=160 time-stride=3
+  tdnnf-layer name=tdnnf18 l2-regularize=0.008 dropout-proportion=0.0 bypass-scale=0.75 dim=1536 bottleneck-dim=160 time-stride=3
+  linear-component name=prefinal-l dim=256 l2-regularize=0.008 orthonormal-constraint=-1.0
+
+  prefinal-layer name=prefinal-chain input=prefinal-l l2-regularize=0.008 big-dim=1536 small-dim=256
+  output-layer name=output include-log-softmax=false dim=4624 l2-regularize=0.005
+
+  prefinal-layer name=prefinal-xent input=prefinal-l l2-regularize=0.008 big-dim=1536 small-dim=256
+  output-layer name=output-xent dim=4624 learning-rate-factor=5.0 l2-regularize=0.005

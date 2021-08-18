@@ -1,0 +1,11 @@
+# ivector-extractor-init --ivector-dim=100 --use-weights=false "gmm-global-to-fgmm exp/chain/extractor_all/final.dubm -|" exp/chain/extractor_all/0.ie 
+# Started at Thu Jun 17 11:49:39 CST 2021
+#
+ivector-extractor-init --ivector-dim=100 --use-weights=false 'gmm-global-to-fgmm exp/chain/extractor_all/final.dubm -|' exp/chain/extractor_all/0.ie 
+gmm-global-to-fgmm exp/chain/extractor_all/final.dubm - 
+LOG (gmm-global-to-fgmm[5.5]:main():gmm-global-to-fgmm.cc:58) Written full GMM to -
+LOG (ivector-extractor-init[5.5]:ComputeDerivedVars():ivector-extractor.cc:183) Computing derived variables for iVector extractor
+LOG (ivector-extractor-init[5.5]:ComputeDerivedVars():ivector-extractor.cc:204) Done.
+LOG (ivector-extractor-init[5.5]:main():ivector-extractor-init.cc:62) Initialized iVector extractor with iVector dimension 100 and wrote it to exp/chain/extractor_all/0.ie
+# Accounting: time=0 threads=1
+# Ended (code 0) at Thu Jun 17 11:49:39 CST 2021, elapsed time 0 seconds

@@ -1,0 +1,37 @@
+# This file was created by the command:
+# steps/nnet3/xconfig_to_configs.py --xconfig-file exp/chain/tdnn_cnn_tdnnf_1a_ft_15hs_combined_ft_15hs_combined_sp/configs/network.xconfig --config-dir exp/chain/tdnn_cnn_tdnnf_1a_ft_15hs_combined_ft_15hs_combined_sp/configs/
+# It contains the same content as ./xconfig but it was parsed,
+# default config values were set, 
+# and Descriptors (input=xxx) were normalized.
+# See also ./xconfig.expanded.1
+
+input name=ivector dim=100
+input name=input dim=40
+idct-layer name=idct affine-transform-file=exp/chain/tdnn_cnn_tdnnf_1a_ft_15hs_combined_ft_15hs_combined_sp/configs/idct.mat cepstral-lifter=22.0 dim=40 include-in-init=False input=input
+linear-component name=ivector-linear dim=200 input=ReplaceIndex(ivector, t, 0) l2-regularize=0.0 learning-rate-factor= max-change=0.75 orthonormal-constraint= param-stddev=
+batchnorm-component name=ivector-batchnorm include-in-init=False input=ivector-linear target-rms=0.025
+batchnorm-component name=idct-batchnorm include-in-init=False input=idct target-rms=1.0
+combine-feature-maps-layer name=combine_inputs height=40 input=Append(idct-batchnorm, ivector-batchnorm) num-filters1=1 num-filters2=5 num-filters3=0
+conv-relu-batchnorm-layer name=cnn1 alpha-in= alpha-out= bias-stddev= dropout-proportion=0.5 height-in=40 height-offsets=-1,0,1 height-out=40 height-subsample-out=1 input=combine_inputs l2-regularize=0.01 learning-rate-factor= max-change=0.75 num-filters-in=6 num-filters-out=64 num-minibatches-history= param-stddev= rank-in= rank-out= required-time-offsets= self-repair-lower-threshold=0.05 self-repair-scale=2e-05 target-rms=1.0 time-offsets=-1,0,1 use-natural-gradient=
+conv-relu-batchnorm-layer name=cnn2 alpha-in= alpha-out= bias-stddev= dropout-proportion=0.5 height-in=40 height-offsets=-1,0,1 height-out=40 height-subsample-out=1 input=cnn1 l2-regularize=0.01 learning-rate-factor= max-change=0.75 num-filters-in=64 num-filters-out=64 num-minibatches-history= param-stddev= rank-in= rank-out= required-time-offsets= self-repair-lower-threshold=0.05 self-repair-scale=2e-05 target-rms=1.0 time-offsets=-1,0,1 use-natural-gradient=
+conv-relu-batchnorm-layer name=cnn3 alpha-in= alpha-out= bias-stddev= dropout-proportion=0.5 height-in=40 height-offsets=-1,0,1 height-out=20 height-subsample-out=2 input=cnn2 l2-regularize=0.01 learning-rate-factor= max-change=0.75 num-filters-in=64 num-filters-out=128 num-minibatches-history= param-stddev= rank-in= rank-out= required-time-offsets= self-repair-lower-threshold=0.05 self-repair-scale=2e-05 target-rms=1.0 time-offsets=-1,0,1 use-natural-gradient=
+conv-relu-batchnorm-layer name=cnn4 alpha-in= alpha-out= bias-stddev= dropout-proportion=0.5 height-in=20 height-offsets=-1,0,1 height-out=20 height-subsample-out=1 input=cnn3 l2-regularize=0.01 learning-rate-factor= max-change=0.75 num-filters-in=128 num-filters-out=128 num-minibatches-history= param-stddev= rank-in= rank-out= required-time-offsets= self-repair-lower-threshold=0.05 self-repair-scale=2e-05 target-rms=1.0 time-offsets=-1,0,1 use-natural-gradient=
+conv-relu-batchnorm-layer name=cnn5 alpha-in= alpha-out= bias-stddev= dropout-proportion=0.5 height-in=20 height-offsets=-1,0,1 height-out=10 height-subsample-out=2 input=cnn4 l2-regularize=0.01 learning-rate-factor= max-change=0.75 num-filters-in=128 num-filters-out=256 num-minibatches-history= param-stddev= rank-in= rank-out= required-time-offsets= self-repair-lower-threshold=0.05 self-repair-scale=2e-05 target-rms=1.0 time-offsets=-1,0,1 use-natural-gradient=
+conv-relu-batchnorm-layer name=cnn6 alpha-in= alpha-out= bias-stddev= dropout-proportion=0.5 height-in=10 height-offsets=-1,0,1 height-out=10 height-subsample-out=1 input=cnn5 l2-regularize=0.01 learning-rate-factor= max-change=0.75 num-filters-in=256 num-filters-out=256 num-minibatches-history= param-stddev= rank-in= rank-out= required-time-offsets= self-repair-lower-threshold=0.05 self-repair-scale=2e-05 target-rms=1.0 time-offsets=-1,0,1 use-natural-gradient=
+tdnnf-layer name=tdnnf7 bottleneck-dim=256 bypass-scale=0.0 context=default dim=1536 dropout-proportion=0.0 input=cnn6 l2-regularize=0.008 max-change=0.75 self-repair-scale=1e-05 time-stride=0
+tdnnf-layer name=tdnnf8 bottleneck-dim=160 bypass-scale=0.75 context=default dim=1536 dropout-proportion=0.0 input=tdnnf7 l2-regularize=0.008 max-change=0.75 self-repair-scale=1e-05 time-stride=3
+tdnnf-layer name=tdnnf9 bottleneck-dim=160 bypass-scale=0.75 context=default dim=1536 dropout-proportion=0.0 input=tdnnf8 l2-regularize=0.008 max-change=0.75 self-repair-scale=1e-05 time-stride=3
+tdnnf-layer name=tdnnf10 bottleneck-dim=160 bypass-scale=0.75 context=default dim=1536 dropout-proportion=0.0 input=tdnnf9 l2-regularize=0.008 max-change=0.75 self-repair-scale=1e-05 time-stride=3
+tdnnf-layer name=tdnnf11 bottleneck-dim=160 bypass-scale=0.75 context=default dim=1536 dropout-proportion=0.0 input=tdnnf10 l2-regularize=0.008 max-change=0.75 self-repair-scale=1e-05 time-stride=3
+tdnnf-layer name=tdnnf12 bottleneck-dim=160 bypass-scale=0.75 context=default dim=1536 dropout-proportion=0.0 input=tdnnf11 l2-regularize=0.008 max-change=0.75 self-repair-scale=1e-05 time-stride=3
+tdnnf-layer name=tdnnf13 bottleneck-dim=160 bypass-scale=0.75 context=default dim=1536 dropout-proportion=0.0 input=tdnnf12 l2-regularize=0.008 max-change=0.75 self-repair-scale=1e-05 time-stride=3
+tdnnf-layer name=tdnnf14 bottleneck-dim=160 bypass-scale=0.75 context=default dim=1536 dropout-proportion=0.0 input=tdnnf13 l2-regularize=0.008 max-change=0.75 self-repair-scale=1e-05 time-stride=3
+tdnnf-layer name=tdnnf15 bottleneck-dim=160 bypass-scale=0.75 context=default dim=1536 dropout-proportion=0.0 input=tdnnf14 l2-regularize=0.008 max-change=0.75 self-repair-scale=1e-05 time-stride=3
+tdnnf-layer name=tdnnf16 bottleneck-dim=160 bypass-scale=0.75 context=default dim=1536 dropout-proportion=0.0 input=tdnnf15 l2-regularize=0.008 max-change=0.75 self-repair-scale=1e-05 time-stride=3
+tdnnf-layer name=tdnnf17 bottleneck-dim=160 bypass-scale=0.75 context=default dim=1536 dropout-proportion=0.0 input=tdnnf16 l2-regularize=0.008 max-change=0.75 self-repair-scale=1e-05 time-stride=3
+tdnnf-layer name=tdnnf18 bottleneck-dim=160 bypass-scale=0.75 context=default dim=1536 dropout-proportion=0.0 input=tdnnf17 l2-regularize=0.008 max-change=0.75 self-repair-scale=1e-05 time-stride=3
+linear-component name=prefinal-l dim=256 input=tdnnf18 l2-regularize=0.008 learning-rate-factor= max-change=0.75 orthonormal-constraint=-1.0 param-stddev=
+prefinal-layer name=prefinal-chain big-dim=1536 input=prefinal-l l2-regularize=0.008 max-change=0.75 self-repair-scale=1e-05 small-dim=256
+output-layer name=output bias-stddev=0.0 bottleneck-dim=-1 dim=4624 include-log-softmax=False input=prefinal-chain l2-regularize=0.005 learning-rate-factor= max-change=1.5 ng-affine-options= ng-linear-options= objective-type=linear orthonormal-constraint=1.0 output-delay=0 param-stddev=0.0
+prefinal-layer name=prefinal-xent big-dim=1536 input=prefinal-l l2-regularize=0.008 max-change=0.75 self-repair-scale=1e-05 small-dim=256
+output-layer name=output-xent bias-stddev=0.0 bottleneck-dim=-1 dim=4624 include-log-softmax=True input=prefinal-xent l2-regularize=0.005 learning-rate-factor=5.0 max-change=1.5 ng-affine-options= ng-linear-options= objective-type=linear orthonormal-constraint=1.0 output-delay=0 param-stddev=0.0

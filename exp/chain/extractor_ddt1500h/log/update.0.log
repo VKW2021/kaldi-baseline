@@ -1,0 +1,70 @@
+# ivector-extractor-est --num-threads=16 exp/chain/extractor_all/0.ie exp/chain/extractor_all/acc.0 exp/chain/extractor_all/1.ie 
+# Started at Thu Jun 17 12:39:14 CST 2021
+#
+ivector-extractor-est --num-threads=16 exp/chain/extractor_all/0.ie exp/chain/extractor_all/acc.0 exp/chain/extractor_all/1.ie 
+LOG (ivector-extractor-est[5.5]:main():ivector-extractor-est.cc:55) Reading model
+LOG (ivector-extractor-est[5.5]:ComputeDerivedVars():ivector-extractor.cc:183) Computing derived variables for iVector extractor
+LOG (ivector-extractor-est[5.5]:ComputeDerivedVars():ivector-extractor.cc:204) Done.
+LOG (ivector-extractor-est[5.5]:main():ivector-extractor-est.cc:59) Reading statistics
+LOG (ivector-extractor-est[5.5]:Update():ivector-extractor.cc:1277) Overall auxf/frame on training data was -139.445 per frame over 5.39537e+07 frames.
+LOG (ivector-extractor-est[5.5]:UpdateProjections():ivector-extractor.cc:1431) Overall objective function improvement for M (mean projections) was 74.7973 per frame over 5.39537e+07 frames.
+LOG (ivector-extractor-est[5.5]:UpdateVariances():ivector-extractor.cc:1513) For Gaussian index 135, floored 2 eigenvalues of variance.
+LOG (ivector-extractor-est[5.5]:UpdateVariances():ivector-extractor.cc:1513) For Gaussian index 153, floored 1 eigenvalues of variance.
+LOG (ivector-extractor-est[5.5]:UpdateVariances():ivector-extractor.cc:1513) For Gaussian index 169, floored 1 eigenvalues of variance.
+LOG (ivector-extractor-est[5.5]:UpdateVariances():ivector-extractor.cc:1513) For Gaussian index 211, floored 1 eigenvalues of variance.
+LOG (ivector-extractor-est[5.5]:UpdateVariances():ivector-extractor.cc:1513) For Gaussian index 265, floored 1 eigenvalues of variance.
+LOG (ivector-extractor-est[5.5]:UpdateVariances():ivector-extractor.cc:1513) For Gaussian index 281, floored 1 eigenvalues of variance.
+LOG (ivector-extractor-est[5.5]:UpdateVariances():ivector-extractor.cc:1513) For Gaussian index 283, floored 1 eigenvalues of variance.
+LOG (ivector-extractor-est[5.5]:UpdateVariances():ivector-extractor.cc:1513) For Gaussian index 285, floored 1 eigenvalues of variance.
+LOG (ivector-extractor-est[5.5]:UpdateVariances():ivector-extractor.cc:1513) For Gaussian index 287, floored 1 eigenvalues of variance.
+LOG (ivector-extractor-est[5.5]:UpdateVariances():ivector-extractor.cc:1513) For Gaussian index 288, floored 1 eigenvalues of variance.
+LOG (ivector-extractor-est[5.5]:UpdateVariances():ivector-extractor.cc:1513) For Gaussian index 292, floored 1 eigenvalues of variance.
+LOG (ivector-extractor-est[5.5]:UpdateVariances():ivector-extractor.cc:1513) For Gaussian index 294, floored 1 eigenvalues of variance.
+LOG (ivector-extractor-est[5.5]:UpdateVariances():ivector-extractor.cc:1513) For Gaussian index 305, floored 1 eigenvalues of variance.
+LOG (ivector-extractor-est[5.5]:UpdateVariances():ivector-extractor.cc:1513) For Gaussian index 307, floored 1 eigenvalues of variance.
+LOG (ivector-extractor-est[5.5]:UpdateVariances():ivector-extractor.cc:1513) For Gaussian index 308, floored 1 eigenvalues of variance.
+LOG (ivector-extractor-est[5.5]:UpdateVariances():ivector-extractor.cc:1513) For Gaussian index 314, floored 2 eigenvalues of variance.
+LOG (ivector-extractor-est[5.5]:UpdateVariances():ivector-extractor.cc:1513) For Gaussian index 323, floored 1 eigenvalues of variance.
+LOG (ivector-extractor-est[5.5]:UpdateVariances():ivector-extractor.cc:1513) For Gaussian index 328, floored 1 eigenvalues of variance.
+LOG (ivector-extractor-est[5.5]:UpdateVariances():ivector-extractor.cc:1513) For Gaussian index 332, floored 1 eigenvalues of variance.
+LOG (ivector-extractor-est[5.5]:UpdateVariances():ivector-extractor.cc:1513) For Gaussian index 337, floored 1 eigenvalues of variance.
+LOG (ivector-extractor-est[5.5]:UpdateVariances():ivector-extractor.cc:1513) For Gaussian index 338, floored 2 eigenvalues of variance.
+LOG (ivector-extractor-est[5.5]:UpdateVariances():ivector-extractor.cc:1513) For Gaussian index 339, floored 1 eigenvalues of variance.
+LOG (ivector-extractor-est[5.5]:UpdateVariances():ivector-extractor.cc:1513) For Gaussian index 344, floored 1 eigenvalues of variance.
+LOG (ivector-extractor-est[5.5]:UpdateVariances():ivector-extractor.cc:1513) For Gaussian index 345, floored 2 eigenvalues of variance.
+LOG (ivector-extractor-est[5.5]:UpdateVariances():ivector-extractor.cc:1513) For Gaussian index 361, floored 4 eigenvalues of variance.
+LOG (ivector-extractor-est[5.5]:UpdateVariances():ivector-extractor.cc:1513) For Gaussian index 363, floored 1 eigenvalues of variance.
+LOG (ivector-extractor-est[5.5]:UpdateVariances():ivector-extractor.cc:1513) For Gaussian index 368, floored 1 eigenvalues of variance.
+LOG (ivector-extractor-est[5.5]:UpdateVariances():ivector-extractor.cc:1513) For Gaussian index 382, floored 1 eigenvalues of variance.
+LOG (ivector-extractor-est[5.5]:UpdateVariances():ivector-extractor.cc:1513) For Gaussian index 389, floored 1 eigenvalues of variance.
+LOG (ivector-extractor-est[5.5]:UpdateVariances():ivector-extractor.cc:1513) For Gaussian index 390, floored 1 eigenvalues of variance.
+LOG (ivector-extractor-est[5.5]:UpdateVariances():ivector-extractor.cc:1513) For Gaussian index 404, floored 1 eigenvalues of variance.
+LOG (ivector-extractor-est[5.5]:UpdateVariances():ivector-extractor.cc:1513) For Gaussian index 410, floored 1 eigenvalues of variance.
+LOG (ivector-extractor-est[5.5]:UpdateVariances():ivector-extractor.cc:1513) For Gaussian index 416, floored 1 eigenvalues of variance.
+LOG (ivector-extractor-est[5.5]:UpdateVariances():ivector-extractor.cc:1513) For Gaussian index 419, floored 1 eigenvalues of variance.
+LOG (ivector-extractor-est[5.5]:UpdateVariances():ivector-extractor.cc:1513) For Gaussian index 423, floored 1 eigenvalues of variance.
+LOG (ivector-extractor-est[5.5]:UpdateVariances():ivector-extractor.cc:1513) For Gaussian index 424, floored 2 eigenvalues of variance.
+LOG (ivector-extractor-est[5.5]:UpdateVariances():ivector-extractor.cc:1513) For Gaussian index 445, floored 1 eigenvalues of variance.
+LOG (ivector-extractor-est[5.5]:UpdateVariances():ivector-extractor.cc:1513) For Gaussian index 447, floored 1 eigenvalues of variance.
+LOG (ivector-extractor-est[5.5]:UpdateVariances():ivector-extractor.cc:1513) For Gaussian index 452, floored 1 eigenvalues of variance.
+LOG (ivector-extractor-est[5.5]:UpdateVariances():ivector-extractor.cc:1513) For Gaussian index 458, floored 2 eigenvalues of variance.
+LOG (ivector-extractor-est[5.5]:UpdateVariances():ivector-extractor.cc:1513) For Gaussian index 464, floored 1 eigenvalues of variance.
+LOG (ivector-extractor-est[5.5]:UpdateVariances():ivector-extractor.cc:1513) For Gaussian index 487, floored 1 eigenvalues of variance.
+LOG (ivector-extractor-est[5.5]:UpdateVariances():ivector-extractor.cc:1513) For Gaussian index 489, floored 1 eigenvalues of variance.
+LOG (ivector-extractor-est[5.5]:UpdateVariances():ivector-extractor.cc:1513) For Gaussian index 509, floored 1 eigenvalues of variance.
+LOG (ivector-extractor-est[5.5]:UpdateVariances():ivector-extractor.cc:1532) Floored 0.258789% of all Gaussian eigenvalues
+LOG (ivector-extractor-est[5.5]:UpdateVariances():ivector-extractor.cc:1534) Overall objf impr/frame for variances was 2.67427 over 5.39537e+07 frames.
+LOG (ivector-extractor-est[5.5]:UpdatePrior():ivector-extractor.cc:1667) Eigenvalues of iVector covariance range from 0.000644063 to 4.08964
+LOG (ivector-extractor-est[5.5]:ComputeDerivedVars():ivector-extractor.cc:183) Computing derived variables for iVector extractor
+LOG (ivector-extractor-est[5.5]:ComputeDerivedVars():ivector-extractor.cc:204) Done.
+LOG (ivector-extractor-est[5.5]:GetOrthogonalIvectorTransform():ivector-extractor.cc:1391) Eigenvalues of Vavg:  [ 0.588849 0.362832 0.247044 0.184877 0.166662 0.0909808 0.0798529 0.070299 0.0580989 0.0517149 0.0501089 0.0453638 0.0421353 0.0392719 0.0340739 0.0310405 0.0289815 0.0286506 0.0273676 0.0263181 0.0239596 0.0232932 0.0224783 0.0206115 0.0194613 0.019041 0.0179894 0.0174966 0.0165364 0.0149932 0.0145759 0.0138605 0.0136989 0.0133871 0.0129877 0.0125261 0.0118845 0.0115794 0.0112228 0.0106249 0.0101922 0.00974686 0.00960288 0.00928441 0.00874746 0.00853541 0.00839891 0.00813728 0.00788357 0.00769066 0.00765013 0.00744722 0.00730989 0.00718523 0.00681562 0.00671242 0.00665685 0.00638256 0.00623955 0.0060986 0.00600281 0.00586034 0.0057003 0.00566844 0.00550535 0.00542436 0.00528108 0.00518857 0.00512448 0.00505518 0.00489811 0.00482242 0.00477287 0.00474467 0.00460304 0.0045711 0.00438444 0.00435264 0.00432576 0.0042307 0.00414112 0.00407945 0.00401148 0.00395553 0.00384556 0.00377264 0.00371858 0.00364839 0.00356043 0.00349195 0.0034405 0.00338267 0.0033278 0.00321833 0.00316922 0.00312714 0.00298001 0.00297787 0.00279691 ]
+
+LOG (ivector-extractor-est[5.5]:PriorDiagnostics():ivector-extractor.cc:1644) Overall auxf improvement from prior is 8.65578 per frame, or 289.508 per iVector.
+LOG (ivector-extractor-est[5.5]:TransformIvectors():ivector-extractor.cc:533) Setting iVector prior offset to 64.4453
+LOG (ivector-extractor-est[5.5]:Update():ivector-extractor.cc:1292) Overall objective-function improvement per frame was 86.1274
+LOG (ivector-extractor-est[5.5]:ComputeDerivedVars():ivector-extractor.cc:183) Computing derived variables for iVector extractor
+LOG (ivector-extractor-est[5.5]:ComputeDerivedVars():ivector-extractor.cc:204) Done.
+LOG (ivector-extractor-est[5.5]:IvectorVarianceDiagnostic():ivector-extractor.cc:1315) The proportion of within-Gaussian variance explained by the iVectors is 0.0888564.
+LOG (ivector-extractor-est[5.5]:main():ivector-extractor-est.cc:67) Updated model and wrote it to exp/chain/extractor_all/1.ie
+# Accounting: time=1 threads=1
+# Ended (code 0) at Thu Jun 17 12:39:15 CST 2021, elapsed time 1 seconds

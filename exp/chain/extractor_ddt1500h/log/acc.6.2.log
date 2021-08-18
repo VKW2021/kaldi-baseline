@@ -1,0 +1,55 @@
+# ivector-extractor-sum-accs --parallel=true "ivector-extractor-acc-stats --num-threads=4 exp/chain/extractor_all/6.ie 'ark,s,cs:splice-feats --left-context=3 --right-context=3 scp:data/train_hires_nopitch/split80/5/feats.scp ark:- | transform-feats exp/chain/extractor_all/final.mat ark:- ark:- | subsample-feats --n=2 ark:- ark:- |' 'ark,s,cs:gunzip -c exp/chain/extractor_all/post.5.gz|' -|" "ivector-extractor-acc-stats --num-threads=4 exp/chain/extractor_all/6.ie 'ark,s,cs:splice-feats --left-context=3 --right-context=3 scp:data/train_hires_nopitch/split80/6/feats.scp ark:- | transform-feats exp/chain/extractor_all/final.mat ark:- ark:- | subsample-feats --n=2 ark:- ark:- |' 'ark,s,cs:gunzip -c exp/chain/extractor_all/post.6.gz|' -|" "ivector-extractor-acc-stats --num-threads=4 exp/chain/extractor_all/6.ie 'ark,s,cs:splice-feats --left-context=3 --right-context=3 scp:data/train_hires_nopitch/split80/7/feats.scp ark:- | transform-feats exp/chain/extractor_all/final.mat ark:- ark:- | subsample-feats --n=2 ark:- ark:- |' 'ark,s,cs:gunzip -c exp/chain/extractor_all/post.7.gz|' -|" "ivector-extractor-acc-stats --num-threads=4 exp/chain/extractor_all/6.ie 'ark,s,cs:splice-feats --left-context=3 --right-context=3 scp:data/train_hires_nopitch/split80/8/feats.scp ark:- | transform-feats exp/chain/extractor_all/final.mat ark:- ark:- | subsample-feats --n=2 ark:- ark:- |' 'ark,s,cs:gunzip -c exp/chain/extractor_all/post.8.gz|' -|" exp/chain/extractor_all/acc.6.2 
+# Started at Thu Jun 17 16:23:57 CST 2021
+#
+ivector-extractor-sum-accs --parallel=true "ivector-extractor-acc-stats --num-threads=4 exp/chain/extractor_all/6.ie 'ark,s,cs:splice-feats --left-context=3 --right-context=3 scp:data/train_hires_nopitch/split80/5/feats.scp ark:- | transform-feats exp/chain/extractor_all/final.mat ark:- ark:- | subsample-feats --n=2 ark:- ark:- |' 'ark,s,cs:gunzip -c exp/chain/extractor_all/post.5.gz|' -|" "ivector-extractor-acc-stats --num-threads=4 exp/chain/extractor_all/6.ie 'ark,s,cs:splice-feats --left-context=3 --right-context=3 scp:data/train_hires_nopitch/split80/6/feats.scp ark:- | transform-feats exp/chain/extractor_all/final.mat ark:- ark:- | subsample-feats --n=2 ark:- ark:- |' 'ark,s,cs:gunzip -c exp/chain/extractor_all/post.6.gz|' -|" "ivector-extractor-acc-stats --num-threads=4 exp/chain/extractor_all/6.ie 'ark,s,cs:splice-feats --left-context=3 --right-context=3 scp:data/train_hires_nopitch/split80/7/feats.scp ark:- | transform-feats exp/chain/extractor_all/final.mat ark:- ark:- | subsample-feats --n=2 ark:- ark:- |' 'ark,s,cs:gunzip -c exp/chain/extractor_all/post.7.gz|' -|" "ivector-extractor-acc-stats --num-threads=4 exp/chain/extractor_all/6.ie 'ark,s,cs:splice-feats --left-context=3 --right-context=3 scp:data/train_hires_nopitch/split80/8/feats.scp ark:- | transform-feats exp/chain/extractor_all/final.mat ark:- ark:- | subsample-feats --n=2 ark:- ark:- |' 'ark,s,cs:gunzip -c exp/chain/extractor_all/post.8.gz|' -|" exp/chain/extractor_all/acc.6.2 
+ivector-extractor-acc-stats --num-threads=4 exp/chain/extractor_all/6.ie 'ark,s,cs:splice-feats --left-context=3 --right-context=3 scp:data/train_hires_nopitch/split80/8/feats.scp ark:- | transform-feats exp/chain/extractor_all/final.mat ark:- ark:- | subsample-feats --n=2 ark:- ark:- |' 'ark,s,cs:gunzip -c exp/chain/extractor_all/post.8.gz|' - 
+ivector-extractor-acc-stats --num-threads=4 exp/chain/extractor_all/6.ie 'ark,s,cs:splice-feats --left-context=3 --right-context=3 scp:data/train_hires_nopitch/split80/7/feats.scp ark:- | transform-feats exp/chain/extractor_all/final.mat ark:- ark:- | subsample-feats --n=2 ark:- ark:- |' 'ark,s,cs:gunzip -c exp/chain/extractor_all/post.7.gz|' - 
+ivector-extractor-acc-stats --num-threads=4 exp/chain/extractor_all/6.ie 'ark,s,cs:splice-feats --left-context=3 --right-context=3 scp:data/train_hires_nopitch/split80/6/feats.scp ark:- | transform-feats exp/chain/extractor_all/final.mat ark:- ark:- | subsample-feats --n=2 ark:- ark:- |' 'ark,s,cs:gunzip -c exp/chain/extractor_all/post.6.gz|' - 
+subsample-feats --n=2 ark:- ark:- 
+ivector-extractor-acc-stats --num-threads=4 exp/chain/extractor_all/6.ie 'ark,s,cs:splice-feats --left-context=3 --right-context=3 scp:data/train_hires_nopitch/split80/5/feats.scp ark:- | transform-feats exp/chain/extractor_all/final.mat ark:- ark:- | subsample-feats --n=2 ark:- ark:- |' 'ark,s,cs:gunzip -c exp/chain/extractor_all/post.5.gz|' - 
+subsample-feats --n=2 ark:- ark:- 
+transform-feats exp/chain/extractor_all/final.mat ark:- ark:- 
+splice-feats --left-context=3 --right-context=3 scp:data/train_hires_nopitch/split80/7/feats.scp ark:- 
+transform-feats exp/chain/extractor_all/final.mat ark:- ark:- 
+LOG (ivector-extractor-acc-stats[5.5]:ComputeDerivedVars():ivector-extractor.cc:183) Computing derived variables for iVector extractor
+LOG (ivector-extractor-acc-stats[5.5]:ComputeDerivedVars():ivector-extractor.cc:204) Done.
+subsample-feats --n=2 ark:- ark:- 
+splice-feats --left-context=3 --right-context=3 scp:data/train_hires_nopitch/split80/8/feats.scp ark:- 
+transform-feats exp/chain/extractor_all/final.mat ark:- ark:- 
+LOG (ivector-extractor-acc-stats[5.5]:ComputeDerivedVars():ivector-extractor.cc:183) Computing derived variables for iVector extractor
+LOG (ivector-extractor-acc-stats[5.5]:ComputeDerivedVars():ivector-extractor.cc:204) Done.
+subsample-feats --n=2 ark:- ark:- 
+splice-feats --left-context=3 --right-context=3 scp:data/train_hires_nopitch/split80/5/feats.scp ark:- 
+transform-feats exp/chain/extractor_all/final.mat ark:- ark:- 
+splice-feats --left-context=3 --right-context=3 scp:data/train_hires_nopitch/split80/6/feats.scp ark:- 
+LOG (ivector-extractor-acc-stats[5.5]:ComputeDerivedVars():ivector-extractor.cc:183) Computing derived variables for iVector extractor
+LOG (ivector-extractor-acc-stats[5.5]:ComputeDerivedVars():ivector-extractor.cc:204) Done.
+LOG (ivector-extractor-acc-stats[5.5]:ComputeDerivedVars():ivector-extractor.cc:183) Computing derived variables for iVector extractor
+LOG (ivector-extractor-acc-stats[5.5]:ComputeDerivedVars():ivector-extractor.cc:204) Done.
+LOG (transform-feats[5.5]:main():transform-feats.cc:158) Overall average [pseudo-]logdet is -124.029 over 8.23106e+06 frames.
+LOG (transform-feats[5.5]:main():transform-feats.cc:161) Applied transform to 27027 utterances; 0 had errors.
+LOG (subsample-feats[5.5]:main():subsample-feats.cc:115) Processed 27027 feature matrices; 0 with errors.
+LOG (subsample-feats[5.5]:main():subsample-feats.cc:117) Processed 8231055 input frames and 4122199 output frames.
+LOG (ivector-extractor-acc-stats[5.5]:main():ivector-extractor-acc-stats.cc:151) Done 27027 files, 0 with errors.  Total frames 4122199
+LOG (ivector-extractor-acc-stats[5.5]:main():ivector-extractor-acc-stats.cc:159) Wrote stats to -
+LOG (transform-feats[5.5]:main():transform-feats.cc:158) Overall average [pseudo-]logdet is -124.029 over 9.60663e+06 frames.
+LOG (transform-feats[5.5]:main():transform-feats.cc:161) Applied transform to 26288 utterances; 0 had errors.
+LOG (subsample-feats[5.5]:main():subsample-feats.cc:115) Processed 26288 feature matrices; 0 with errors.
+LOG (subsample-feats[5.5]:main():subsample-feats.cc:117) Processed 9606630 input frames and 4809821 output frames.
+LOG (ivector-extractor-acc-stats[5.5]:main():ivector-extractor-acc-stats.cc:151) Done 26288 files, 0 with errors.  Total frames 4809821
+LOG (transform-feats[5.5]:main():transform-feats.cc:158) Overall average [pseudo-]logdet is -124.029 over 1.00628e+07 frames.
+LOG (transform-feats[5.5]:main():transform-feats.cc:161) Applied transform to 26269 utterances; 0 had errors.
+LOG (subsample-feats[5.5]:main():subsample-feats.cc:115) Processed 26269 feature matrices; 0 with errors.
+LOG (subsample-feats[5.5]:main():subsample-feats.cc:117) Processed 10062811 input frames and 5037793 output frames.
+LOG (ivector-extractor-acc-stats[5.5]:main():ivector-extractor-acc-stats.cc:151) Done 26269 files, 0 with errors.  Total frames 5037793
+LOG (transform-feats[5.5]:main():transform-feats.cc:158) Overall average [pseudo-]logdet is -124.029 over 9.2572e+06 frames.
+LOG (transform-feats[5.5]:main():transform-feats.cc:161) Applied transform to 26730 utterances; 0 had errors.
+LOG (subsample-feats[5.5]:main():subsample-feats.cc:115) Processed 26730 feature matrices; 0 with errors.
+LOG (subsample-feats[5.5]:main():subsample-feats.cc:117) Processed 9257196 input frames and 4635194 output frames.
+LOG (ivector-extractor-acc-stats[5.5]:main():ivector-extractor-acc-stats.cc:151) Done 26730 files, 0 with errors.  Total frames 4635194
+LOG (ivector-extractor-acc-stats[5.5]:main():ivector-extractor-acc-stats.cc:159) Wrote stats to -
+LOG (ivector-extractor-acc-stats[5.5]:main():ivector-extractor-acc-stats.cc:159) Wrote stats to -
+LOG (ivector-extractor-acc-stats[5.5]:main():ivector-extractor-acc-stats.cc:159) Wrote stats to -
+LOG (ivector-extractor-sum-accs[5.5]:main():ivector-extractor-sum-accs.cc:83) Wrote summed stats to exp/chain/extractor_all/acc.6.2
+# Accounting: time=2447 threads=1
+# Ended (code 0) at Thu Jun 17 17:04:44 CST 2021, elapsed time 2447 seconds

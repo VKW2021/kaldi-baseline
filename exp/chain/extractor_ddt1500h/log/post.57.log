@@ -1,0 +1,18 @@
+# gmm-global-get-post --n=5 --min-post=0.025 exp/chain/extractor_all/final.dubm "ark,s,cs:apply-cmvn-online --config=exp/chain/extractor_all/online_cmvn.conf --spk2utt=ark:data/train_hires_nopitch/split80/57/spk2utt exp/chain/extractor_all/global_cmvn.stats scp:data/train_hires_nopitch/split80/57/feats.scp ark:- | splice-feats --left-context=3 --right-context=3 ark:- ark:- | transform-feats exp/chain/extractor_all/final.mat ark:- ark:- | subsample-feats --n=2 ark:- ark:- |" ark:- | scale-post ark:- 0.2 "ark:|gzip -c >exp/chain/extractor_all/post.57.gz" 
+# Started at Thu Jun 17 11:49:41 CST 2021
+#
+gmm-global-get-post --n=5 --min-post=0.025 exp/chain/extractor_all/final.dubm 'ark,s,cs:apply-cmvn-online --config=exp/chain/extractor_all/online_cmvn.conf --spk2utt=ark:data/train_hires_nopitch/split80/57/spk2utt exp/chain/extractor_all/global_cmvn.stats scp:data/train_hires_nopitch/split80/57/feats.scp ark:- | splice-feats --left-context=3 --right-context=3 ark:- ark:- | transform-feats exp/chain/extractor_all/final.mat ark:- ark:- | subsample-feats --n=2 ark:- ark:- |' ark:- 
+scale-post ark:- 0.2 'ark:|gzip -c >exp/chain/extractor_all/post.57.gz' 
+subsample-feats --n=2 ark:- ark:- 
+splice-feats --left-context=3 --right-context=3 ark:- ark:- 
+transform-feats exp/chain/extractor_all/final.mat ark:- ark:- 
+apply-cmvn-online --config=exp/chain/extractor_all/online_cmvn.conf --spk2utt=ark:data/train_hires_nopitch/split80/57/spk2utt exp/chain/extractor_all/global_cmvn.stats scp:data/train_hires_nopitch/split80/57/feats.scp ark:- 
+LOG (apply-cmvn-online[5.5]:main():apply-cmvn-online.cc:133) Applied online CMVN to 16521 files, or 7275822 frames.
+LOG (transform-feats[5.5]:main():transform-feats.cc:158) Overall average [pseudo-]logdet is -124.029 over 7.27582e+06 frames.
+LOG (transform-feats[5.5]:main():transform-feats.cc:161) Applied transform to 16521 utterances; 0 had errors.
+LOG (subsample-feats[5.5]:main():subsample-feats.cc:115) Processed 16521 feature matrices; 0 with errors.
+LOG (subsample-feats[5.5]:main():subsample-feats.cc:117) Processed 7275822 input frames and 3640610 output frames.
+LOG (gmm-global-get-post[5.5]:main():gmm-global-get-post.cc:115) Done 16521 files, 0 with errors, average UBM log-likelihood is -50.2886 over 3640610 frames.
+LOG (scale-post[5.5]:main():scale-post.cc:79) Done 16521 posteriors;  0 had no scales.
+# Accounting: time=206 threads=1
+# Ended (code 0) at Thu Jun 17 11:53:07 CST 2021, elapsed time 206 seconds

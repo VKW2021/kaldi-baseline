@@ -1,0 +1,27 @@
+# ivector-extractor-sum-accs exp/chain/extractor_all/acc.1.1 exp/chain/extractor_all/acc.1.2 exp/chain/extractor_all/acc.1.3 exp/chain/extractor_all/acc.1.4 exp/chain/extractor_all/acc.1.5 exp/chain/extractor_all/acc.1.6 exp/chain/extractor_all/acc.1.7 exp/chain/extractor_all/acc.1.8 exp/chain/extractor_all/acc.1.9 exp/chain/extractor_all/acc.1.10 exp/chain/extractor_all/acc.1.11 exp/chain/extractor_all/acc.1.12 exp/chain/extractor_all/acc.1.13 exp/chain/extractor_all/acc.1.14 exp/chain/extractor_all/acc.1.15 exp/chain/extractor_all/acc.1.16 exp/chain/extractor_all/acc.1.17 exp/chain/extractor_all/acc.1.18 exp/chain/extractor_all/acc.1.19 exp/chain/extractor_all/acc.1.20 exp/chain/extractor_all/acc.1 
+# Started at Thu Jun 17 13:27:15 CST 2021
+#
+ivector-extractor-sum-accs exp/chain/extractor_all/acc.1.1 exp/chain/extractor_all/acc.1.2 exp/chain/extractor_all/acc.1.3 exp/chain/extractor_all/acc.1.4 exp/chain/extractor_all/acc.1.5 exp/chain/extractor_all/acc.1.6 exp/chain/extractor_all/acc.1.7 exp/chain/extractor_all/acc.1.8 exp/chain/extractor_all/acc.1.9 exp/chain/extractor_all/acc.1.10 exp/chain/extractor_all/acc.1.11 exp/chain/extractor_all/acc.1.12 exp/chain/extractor_all/acc.1.13 exp/chain/extractor_all/acc.1.14 exp/chain/extractor_all/acc.1.15 exp/chain/extractor_all/acc.1.16 exp/chain/extractor_all/acc.1.17 exp/chain/extractor_all/acc.1.18 exp/chain/extractor_all/acc.1.19 exp/chain/extractor_all/acc.1.20 exp/chain/extractor_all/acc.1 
+LOG (ivector-extractor-sum-accs[5.5]:main():ivector-extractor-sum-accs.cc:74) Reading stats from exp/chain/extractor_all/acc.1.1
+LOG (ivector-extractor-sum-accs[5.5]:main():ivector-extractor-sum-accs.cc:74) Reading stats from exp/chain/extractor_all/acc.1.2
+LOG (ivector-extractor-sum-accs[5.5]:main():ivector-extractor-sum-accs.cc:74) Reading stats from exp/chain/extractor_all/acc.1.3
+LOG (ivector-extractor-sum-accs[5.5]:main():ivector-extractor-sum-accs.cc:74) Reading stats from exp/chain/extractor_all/acc.1.4
+LOG (ivector-extractor-sum-accs[5.5]:main():ivector-extractor-sum-accs.cc:74) Reading stats from exp/chain/extractor_all/acc.1.5
+LOG (ivector-extractor-sum-accs[5.5]:main():ivector-extractor-sum-accs.cc:74) Reading stats from exp/chain/extractor_all/acc.1.6
+LOG (ivector-extractor-sum-accs[5.5]:main():ivector-extractor-sum-accs.cc:74) Reading stats from exp/chain/extractor_all/acc.1.7
+LOG (ivector-extractor-sum-accs[5.5]:main():ivector-extractor-sum-accs.cc:74) Reading stats from exp/chain/extractor_all/acc.1.8
+LOG (ivector-extractor-sum-accs[5.5]:main():ivector-extractor-sum-accs.cc:74) Reading stats from exp/chain/extractor_all/acc.1.9
+LOG (ivector-extractor-sum-accs[5.5]:main():ivector-extractor-sum-accs.cc:74) Reading stats from exp/chain/extractor_all/acc.1.10
+LOG (ivector-extractor-sum-accs[5.5]:main():ivector-extractor-sum-accs.cc:74) Reading stats from exp/chain/extractor_all/acc.1.11
+LOG (ivector-extractor-sum-accs[5.5]:main():ivector-extractor-sum-accs.cc:74) Reading stats from exp/chain/extractor_all/acc.1.12
+LOG (ivector-extractor-sum-accs[5.5]:main():ivector-extractor-sum-accs.cc:74) Reading stats from exp/chain/extractor_all/acc.1.13
+LOG (ivector-extractor-sum-accs[5.5]:main():ivector-extractor-sum-accs.cc:74) Reading stats from exp/chain/extractor_all/acc.1.14
+LOG (ivector-extractor-sum-accs[5.5]:main():ivector-extractor-sum-accs.cc:74) Reading stats from exp/chain/extractor_all/acc.1.15
+LOG (ivector-extractor-sum-accs[5.5]:main():ivector-extractor-sum-accs.cc:74) Reading stats from exp/chain/extractor_all/acc.1.16
+LOG (ivector-extractor-sum-accs[5.5]:main():ivector-extractor-sum-accs.cc:74) Reading stats from exp/chain/extractor_all/acc.1.17
+LOG (ivector-extractor-sum-accs[5.5]:main():ivector-extractor-sum-accs.cc:74) Reading stats from exp/chain/extractor_all/acc.1.18
+LOG (ivector-extractor-sum-accs[5.5]:main():ivector-extractor-sum-accs.cc:74) Reading stats from exp/chain/extractor_all/acc.1.19
+LOG (ivector-extractor-sum-accs[5.5]:main():ivector-extractor-sum-accs.cc:74) Reading stats from exp/chain/extractor_all/acc.1.20
+LOG (ivector-extractor-sum-accs[5.5]:main():ivector-extractor-sum-accs.cc:83) Wrote summed stats to exp/chain/extractor_all/acc.1
+# Accounting: time=4 threads=1
+# Ended (code 0) at Thu Jun 17 13:27:19 CST 2021, elapsed time 4 seconds
