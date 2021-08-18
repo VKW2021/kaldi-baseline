@@ -1,0 +1,21 @@
+1. run_1_ddt1500h.sh
+    进行1500小时数据准备;
+    训练GMM
+
+2. run_2_chain_ddt1500h.sh
+    提取1500小时数据MFCC特征；
+    使用1500小时数据训练ivector提取器;
+    训练chain model(CNN_TDNNF);
+    对验证集解码
+
+3. run_3_finetune_15h.sh
+    提取15小时数据MFCC特征；
+    在第二步的基础上使用15小时数据对模型进行微调；
+    对验证集解码
+
+4. run_4_kws.sh
+    准备关键词检测相关文件；
+    进行关键词检测，得到检测结果results
+
+
+
